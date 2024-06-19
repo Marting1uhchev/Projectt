@@ -26,8 +26,6 @@ void compressPGM(const char *inputFile, const char *outputFile) {
     
     fscanf(in, "%2s\n", format);
     fscanf(in, "%d %d\n%d\n", &width, &height, &maxVal);
-
-    // Writing header to output file
     fprintf(out, "%s\n%d %d\n%d\n", format, width, height, maxVal);
 
     if (format[0] != 'P' || format[1] != '5') {
